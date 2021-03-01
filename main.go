@@ -108,7 +108,7 @@ func main() {
 
 		serverSSL.TLSConfig = &tls.Config{
 			Certificates: []tls.Certificate{cert},
-		}``
+		}
 	}
 
 	// gzip logic
