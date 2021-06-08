@@ -81,8 +81,9 @@ clean_on_exit = true
 
 # Problems?
 
-Make sure `go/bin` is into Path.
-## Example Linux and Mac:
+Make sure `go/bin` is inside PATH.
+
+## Add go/bin to PATH (Linux and Mac)
 
 Inside .bash or .zshrc file write:
 
