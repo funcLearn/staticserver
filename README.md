@@ -6,7 +6,7 @@ Localhost server for HTML, JS, CSS development.
 Type into terminal:
 
 ```
-go get -u github.com/funclearn/staticserver
+go get -u github.com/funcLearn/staticserver
 
 staticserver -ssl -gzip -cache
 ```
@@ -31,7 +31,7 @@ Example:
 go get -u github.com/cosmtrek/air
 ```
 
-Inside the folder with HTML, CSS and JS create `.air.toml` file with the following content:
+Create `.air.toml` file with the following content:
 
 ```toml
 # Config file for [Air](https://github.com/cosmtrek/air) in TOML format
