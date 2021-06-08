@@ -1,4 +1,4 @@
-module github.com/luckysuperduper/staticserver
+module github.com/funcLearn/staticserver
 
 go 1.15
 

@@ -5,7 +5,8 @@ import (
 	"flag"
 	"fmt"
 	"github.com/fatih/color"
-	"github.com/luckysuperduper/staticserver/middleware"
+	"github.com/funcLearn/staticserver/middleware"
+	"io"
 	"log"
 	"net/http"
 	"os"
@@ -85,8 +86,22 @@ func main() {
 	sslPtr := flag.Bool("ssl", false, "Activate HTTPS server")
 	gzipPtr := flag.Bool("gzip", false, "Activate gzip")
 	cachePtr := flag.Bool("cache", false, "Activate cache")
+	downloadCert := flag.Bool("downloadCert", false, "Download certificate")
 	flag.Parse()
 	// Get the values for pointers
+
+	if *downloadCert {
+		f, err := os.Create("certFile.cer")
+		if err != nil {
+			log.Fatalln(err)
+		}
+		_, err = io.WriteString(f, certFile)
+		if err != nil {
+			log.Fatalln(err)
+		}
+
+		os.Exit(0)
+	}
 
 	if *sslPtr || *gzipPtr || *cachePtr {
 		ssl = *sslPtr
